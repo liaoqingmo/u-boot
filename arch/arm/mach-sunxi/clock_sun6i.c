@@ -76,8 +76,9 @@ void clock_init_uart(void)
 		(struct sunxi_ccm_reg *)SUNXI_CCM_BASE;
 
 	/* uart clock source is apb2 */
-	writel(APB2_CLK_SRC_OSC24M|
-	       APB2_CLK_RATE_N_1|
+//	writel(APB2_CLK_SRC_OSC24M|
+	writel(APB2_CLK_SRC_PLL6|
+	       APB2_CLK_RATE_N_2|
 	       APB2_CLK_RATE_M(1),
 	       &ccm->apb2_div);
 

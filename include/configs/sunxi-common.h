@@ -42,7 +42,10 @@
 /* Serial & console */
 #define CONFIG_SYS_NS16550_SERIAL
 /* ns16550 reg in the low bits of cpu reg */
+#if 0
 #define CONFIG_SYS_NS16550_CLK		24000000
+#endif
+#define CONFIG_SYS_NS16550_CLK		300000000
 #ifndef CONFIG_DM_SERIAL
 # define CONFIG_SYS_NS16550_REG_SIZE	-4
 # define CONFIG_SYS_NS16550_COM1		SUNXI_UART0_BASE
